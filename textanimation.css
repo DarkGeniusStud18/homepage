@@ -1,0 +1,54 @@
+.home-content h1{
+    font-size: 52px
+}
+.profession{
+    font-family: sans-serif;
+    position: relative;
+}
+.profession::before{
+content: "Front-End Developer";
+color: #E85C16;
+animation: words 25s infinite;
+}
+.profession::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #CBC5EA;
+    border-left: 2px solid #0F1C45;
+    right: -8px;
+    animation: cursor 0.8s infinite, typing 25s steps(14) infinite;
+}
+@keyframes cursor {
+    to{
+        border-left: 2px solid #0F1C4500 ;
+    }
+}
+
+@keyframes words {
+    0%,20%{
+        content:"Student";
+    }
+    21%,40%{
+        content:"Front-End Developer";
+    }
+    41%,60%{
+        content:"Back-End Developer";
+    }
+    61%,80%{
+        content:"Data-Scientist";
+    }
+    81%,100%{
+        content:"Machine-Learner";
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width:calc(100% + 8px);
+    }
+}
